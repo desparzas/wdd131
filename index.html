@@ -3,30 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles/base.css" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="WDD 131 - Dynamic Web Fundamentals - David Esparza Sánchez - A personal portfolio page showcasing web development resources and information about Peru"
+    />
+    <meta name="author" content="David Esparza Sánchez" />
+    <title>WDD 131 - Dynamic Web Fundamentals - David Esparza Sánchez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <script src="scripts/getdates.js" defer></script>
   </head>
-  <style>
-    .navigation {
-      display: flex;
-      align-items: center;
-      background-color: black;
-    }
-
-    .navigation a {
-      display: block;
-      color: #eee;
-      padding: 0.75rem;
-      text-decoration: none;
-      text-align: center;
-      flex: 1 1 auto;
-    }
-  </style>
   <body>
-    <nav class="navigation">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="services.html">Services</a>
-    </nav>
+    <header>
+      <h1>
+        WDD 131: Dynamic Web Fundamentals -
+        <span class="highlight">David Esparza Sánchez</span>
+      </h1>
+      <nav>
+        <a target="_blank" href="https://www.linkedin.com/in/desparzas/"
+          >LinkedIn</a
+        >
+        <a target="_blank" href="https://byui.instructure.com/">I-Learn</a>
+        <a
+          target="_blank"
+          href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
+          >Scripture</a
+        >
+        <a href="#">Final Project</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>About Me</h2>
+        <div class="content">
+          <div class="text">
+            <p>
+              I am David Esparza Sánchez, and I go by David. I was born in
+              Trujillo, Peru, and I am currently a backend developer at a
+              Chilean startup. Sometimes, I enjoy playing the guitar and playing
+              basketball.
+            </p>
+          </div>
+          <img
+            src="images/profile.jpg"
+            alt="Portrait of David Esparza Sánchez"
+            class="profile-img"
+          />
+        </div>
+        <div class="location">
+          <h3>Trujillo, Peru</h3>
+          <div class="peru-info">
+            <figure>
+              <img
+                src="images/peru-flag.png"
+                alt="Official Flag of Peru"
+                class="flag"
+              />
+              <figcaption class="flag-caption">Flag of Peru</figcaption>
+            </figure>
+            <p>
+              Peru is a country in South America known for its rich
+              biodiversity, ancient Inca history, and vibrant culture. It is
+              home to Machu Picchu, one of the New Seven Wonders of the World,
+              and has diverse ecosystems, from deserts to the Amazon rainforest.
+              Peruvian cuisine, including dishes like ceviche, is globally
+              recognized.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Web Dev Resources</h2>
+        <ul>
+          <li><a target="_blank" href="https://dev.to">Dev.to Community</a></li>
+          <li>
+            <a target="_blank" href="https://www.smashingmagazine.com/"
+              >Smashing Magazine</a
+            >
+          </li>
+          <li>
+            <a target="_blank" href="https://css-tricks.com/">CSS Tricks</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.w3schools.com/">W3 Schools</a>
+          </li>
+          <li><a target="_blank" href="https://www.udemy.com/">Udemy</a></li>
+          <li>
+            <a target="_blank" href="https://picsum.photos/"
+              >Lorem Picsum Image Placeholder</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>©<span id="currentyear"></span> 🌟 David Esparza Sánchez 🌟 Peru</p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
