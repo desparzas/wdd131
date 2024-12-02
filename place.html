@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page about Piura">
+    <meta name="author" content="David Esparza Sánchez">
+    <title>Piura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Piura</h1>
+    </header>
+    <main>
+      <div class="hero">
+        <picture>
+          <source
+            srcset="images/piura-small.webp"
+            media="(max-width: 767px)"
+            id="heroImageSmall"
+          >
+          <img src="images/piura-small.webp" alt="Hero image of the place">
+        </picture>
+      </div>
+
+      <div class="flex-container">
+        <section class="weather">
+          <h2 class="weather-large">Weather</h2>
+          <h2 class="weather-mobile">Weather</h2>
+          <article class="weather-info">
+            <img
+              src="images/weather.svg"
+              alt="Weather mobile icon"
+              class="weather-mobile-icon"
+            >
+            <p>Temperature: <span id="temperature">10°C</span></p>
+            <p>Wind Speed: <span id="windSpeed">5 km/h</span></p>
+            <p>Wind Chill: <span id="windChill">N/A</span></p>
+          </article>
+        </section>
+        <section class="details">
+          <h2>Details</h2>
+          <ul class="details-list">
+            <li>Paradisiacal beaches</li>
+            <li>Unique gastronomy</li>
+            <li>Mangroves of Tumbes</li>
+            <li>Tallanes culture</li>
+            <li>Catacaos handicrafts</li>
+            <li>Typical dance</li>
+            <li>Warm climate</li>
+            <li>Tumbes-Piura dry forest</li>
+            <li>Cabo Blanco</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>©<span id="currentyear"></span> 🌟 David Esparza Sánchez 🌟 Peru</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
