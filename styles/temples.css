@@ -98,6 +98,12 @@ nav {
   gap: 1rem;
 }
 
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
 figure {
   text-align: center;
 }
@@ -118,4 +124,20 @@ footer {
   background-color: var(--background-color);
   color: var(--text-color-2);
   text-align: center;
+}
+
+.temple-info {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: normal;
+  text-align: left;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.overlay{
+  display: flex;
+  justify-content: center;
 }

@@ -30,8 +30,13 @@
     padding: 10px;
   }
 
+  #gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 10px;
+  }
+
   main {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

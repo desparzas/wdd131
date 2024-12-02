@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Temple Albun">
+    <meta name="author" content="David Esparza Sánchez">
+    <title>Temple Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/filter-temples.js" defer></script>
+
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Responsive Navigation</h1>
+        <div>
+          <button type="button" id="menu"></button>
+          <nav class="navigation">
+            <a href="#" title="Home">Home</a>
+            <a href="#" title="Old" class="active">Old</a>
+            <a href="#" title="New">New</a>
+            <a href="#" title="Large">Large</a>
+            <a href="#" title="Small">Small</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h2>Home</h2>
+      <section id="gallery">
+      </section>
+    </main>
+    <footer>
+      <p>©<span id="currentyear"></span> 🌟 David Esparza Sánchez 🌟 Peru</p>
+      <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/temples.js"></script>
+  </body>
+</html>
