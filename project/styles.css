@@ -1,0 +1,71 @@
+/* General Styling */
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #f5f2ea;
+  color: #1f313e;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Centered Container */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Exo", sans-serif;
+  font-size: 1.8rem;
+  color: #dc384e;
+}
+
+h2 {
+  font-family: "Exo", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+a {
+  color: #dc384e;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#wireframe img {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.divider {
+  margin: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
