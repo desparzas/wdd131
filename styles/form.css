@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f2ea;
+  color: #1f313e;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #dc384e;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+/* Estilos para las estrellas */
+.rating label {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc; /* Color por defecto para las estrellas vacías */
+  transition: color 0.2s ease-in-out;
+}
+
+.rating input[type="radio"] {
+  display: none; /* Escondemos los radio buttons, solo mostramos las etiquetas */
+}
+
+/* Cambio de color de las estrellas cuando están seleccionadas */
+.rating input[type="radio"]:checked + label {
+  color: #dc384e; /* Color para las estrellas llenas */
+}
+
+.rating input[type="radio"]:hover + label {
+  color: #ff4b72; /* Color al pasar el mouse sobre las estrellas */
+}
+
+.rating label:hover ~ label {
+  color: #ff4b72; /* Cambiar color de estrellas a la izquierda de la estrella seleccionada */
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  background-color: #dc384e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #c73343;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #1f313e;
+}

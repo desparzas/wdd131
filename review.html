@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="confirmation-container">
+      <h1>Thank you for your review!</h1>
+      <p>Your review has been submitted successfully.</p>
+      <p>Number of reviews submitted: <span id="review-count">0</span></p>
+      <a href="form.html">Submit another review</a>
+    </main>
+    <footer>
+      <p>Common Footer Content</p>
+    </footer>
+    <script>
+      // Get the number of reviews from localStorage
+      document.addEventListener("DOMContentLoaded", function () {
+        const reviewCount = localStorage.getItem("reviewCount") || 0;
+        document.getElementById("review-count").textContent = reviewCount;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css" />
+  </head>
+  <body>
+    <main class="form-container">
+      <h1>Product Review</h1>
+      <form id="review-form" method="get" action="review.html">
+        <!-- Product Name -->
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product ...</option>
+            <!-- Dynamic product options will be inserted here -->
+          </select>
+        </div>
+
+        <!-- Overall Rating -->
+        <div class="form-group">
+          <label>Overall Rating</label>
+          <div class="rating">
+            <!-- Estrellas con inputs de tipo radio -->
+            <input type="radio" id="star1" name="rating" value="1" required />
+            <label for="star1">&starf;</label>
+
+            <input type="radio" id="star2" name="rating" value="2" required />
+            <label for="star2">&starf;</label>
+
+            <input type="radio" id="star3" name="rating" value="3" required />
+            <label for="star3">&starf;</label>
+
+            <input type="radio" id="star4" name="rating" value="4" required />
+            <label for="star4">&starf;</label>
+
+            <input type="radio" id="star5" name="rating" value="5" required />
+            <label for="star5">&starf;</label>
+          </div>
+        </div>
+
+        <!-- Date of Installation -->
+        <div class="form-group">
+          <label for="installationDate">Date of Installation</label>
+          <input
+            type="date"
+            id="installationDate"
+            name="installationDate"
+            required
+          />
+        </div>
+
+        <!-- Useful Features -->
+        <div class="form-group">
+          <label>Useful Features</label>
+          <div class="checkbox-group">
+            <!-- Checkboxes for features -->
+            <input
+              type="checkbox"
+              id="durability"
+              name="features"
+              value="durability"
+            /><label for="durability">Durability</label>
+            <input
+              type="checkbox"
+              id="ease"
+              name="features"
+              value="ease"
+            /><label for="ease">Ease of Use</label>
+            <input
+              type="checkbox"
+              id="performance"
+              name="features"
+              value="performance"
+            /><label for="performance">Performance</label>
+            <input
+              type="checkbox"
+              id="design"
+              name="features"
+              value="design"
+            /><label for="design">Design</label>
+          </div>
+        </div>
+
+        <!-- Written Review -->
+        <div class="form-group">
+          <label for="review">Written Review (Optional)</label>
+          <textarea
+            id="review"
+            name="review"
+            placeholder="Share your experience with the product..."
+          ></textarea>
+        </div>
+
+        <!-- User Name -->
+        <div class="form-group">
+          <label for="userName">Your Name (Optional)</label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <!-- Form Submission Button -->
+        <div class="form-group">
+          <input type="submit" value="Post Review" />
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <p>2024 &copy; David Elías Esparza Sánchez. Last modified: 2024-12-05</p>
+    </footer>
+    <script src="scripts/form.js"></script>
+  </body>
+</html>
