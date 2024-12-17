@@ -1,0 +1,248 @@
+:root {
+    --color-primary: #1a73e8;
+    --color-secondary: #f8f9fa;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-background: #fff;
+    --color-background-alt: #f8f8f8;
+    --color-border: #e0e0e0;
+    --color-border: #dc384e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+h1, h2, h3 {
+    font-family: "Exo", sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.hero, .latest-news, .featured-albums, .social-connect, footer {
+    padding: 2rem 1rem;
+}
+
+.hero {
+    text-align: center;
+    background-color: var(--color-background-alt);
+}
+
+.band-info {
+    background-color: var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.band-avatar {
+    width: 64px;
+    height: 64px;
+    background-color: #ccc;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-image: url('https://www.thebeatles.com/sites/default/files/styles/max_2600x2600/public/2024-11/Beatles64_1x1_wBilling_SM.jpg?itok=nKsysn-Y');
+}
+
+.band-details {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.news-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.news-card {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.featured-albums {
+    background-color: var(--color-background-alt);
+}
+
+.album-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.album-card {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.album-genre {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+}
+
+.album-cover {
+    width: 100%;
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.album-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.album-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.social-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-item {
+    text-align: center;
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: var(--color-background-alt);
+    border-top: 1px solid var(--color-border);
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    margin-left: 1rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    .hero, .latest-news, .featured-albums, .social-connect, footer {
+        padding: 4rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .news-grid, .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .album-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.instagram-icon {
+    background-image: url('./images/instagram.png');
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.twitter-icon {
+    background-image: url('./images/x.png');
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.youtube-icon {
+    background-image: url('./images/youtube.png');
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
