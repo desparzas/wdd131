@@ -221,7 +221,7 @@ footer {
 }
 
 .instagram-icon {
-    background-image: url('./images/instagram.png');
+    background-image: url('../images/instagram.png');
     aspect-ratio: 1;
     background-size: cover;
     background-position: center;
@@ -230,7 +230,7 @@ footer {
 }
 
 .twitter-icon {
-    background-image: url('./images/x.png');
+    background-image: url('../images/x.png');
     aspect-ratio: 1;
     background-size: cover;
     background-position: center;
@@ -239,7 +239,7 @@ footer {
 }
 
 .youtube-icon {
-    background-image: url('./images/youtube.png');
+    background-image: url('../images/youtube.png');
     aspect-ratio: 1;
     background-size: cover;
     background-position: center;
