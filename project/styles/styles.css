@@ -196,30 +196,6 @@ footer {
     opacity: 0.9;
 }
 
-@media (min-width: 768px) {
-    .hero, .latest-news, .featured-albums, .social-connect, footer {
-        padding: 4rem 2rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .news-grid, .album-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .social-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .album-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-}
-
 .instagram-icon {
     background-image: url('../images/instagram.png');
     aspect-ratio: 1;
@@ -246,3 +222,118 @@ footer {
     background-repeat: no-repeat;
     border-radius: 8px;
 }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-background);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar-links li {
+    margin-left: 1rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.navbar-links a.active {
+    color: var(--color-primary);
+}
+
+.navbar-toggle {
+    display: block;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-text);
+    margin: 5px 0;
+}
+
+/* Biography page */
+.biography-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.biography-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Gallery page */
+.gallery-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .hero, .latest-news, .featured-albums, .social-connect, .biography, .gallery, footer {
+        padding: 4rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .news-grid, .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .biography-content {
+        flex-direction: row;
+    }
+
+    .biography-image {
+        max-width: 50%;
+        /* propiedades para que la imagen no se deforme */
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .gallery-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .album-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+

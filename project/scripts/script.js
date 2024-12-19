@@ -99,6 +99,7 @@ function populateAlbums() {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Add smooth scrolling to all links
+    console.log('DOM fully loaded and parsed');
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -108,12 +109,36 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+    const currentPath = window.location.pathname;
 
-    populateAlbums();
+    // si la página es el index, mostrar los álbumes
+    if (currentPath === '/project/index.html'){
+        populateAlbums();
+    }
+
+    // ponerle el estilo active al link que corresponda
+    console.log(currentPath);
+    const links = document.querySelectorAll('.navbar-links a');
+    links.forEach(link => {
+        if (link.pathname === currentPath) {
+            link.classList.add('active');
+        }
+    });
 
     // Add hover effect to album covers
     const albumCovers = document.querySelectorAll('.album-cover');
     albumCovers.forEach(cover => {
+        cover.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        cover.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(cover => {
         cover.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05)';
             this.style.transition = 'transform 0.3s ease';
