@@ -141,6 +141,7 @@ h2 {
 
 .social-item {
     text-align: center;
+    text-decoration: none;
 }
 
 .social-icon {
@@ -295,6 +296,23 @@ footer {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.album-card.favorite {
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-background-alt);
+    font-weight: bold;
+}
+
+.favorite-btn{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 1rem 0;
 }
 
 @media (min-width: 768px) {

@@ -26,7 +26,8 @@
         <section class="hero">
             <h1>Welcome to The Long and Winding Web</h1>
             <p>Explore the iconic music and story of The Beatles</p>
-            <button class="btn btn-primary">Explore Now</button>
+            <!-- al hacer click redireccionar a https://www.thebeatles.com/ -->
+            <button class="btn btn-primary" onclick="window.location.href='https://www.thebeatles.com/'">Explore Now</button>
             
             <div class="band-info">
                 <div class="band-avatar"></div>
@@ -34,7 +35,7 @@
                     <h2>The Beatles</h2>
                     <span>Legendary Band</span>
                 </div>
-                <button class="btn btn-secondary">Learn More</button>
+                <button class="btn btn-secondary" onclick="window.location.href='biography.html'">Learn More</button>
             </div>
         </section>
 
@@ -84,21 +85,21 @@
             <h2>Connect with Us</h2>
             
             <div class="social-grid">
-                <div class="social-item">
+                <a class="social-item" href="https://x.com/thebeatles" target="_blank">
                     <div class="social-icon twitter-icon"></div>
                     <h3>Follow us on Twitter</h3>
                     <p>@thebeatles</p>
-                </div>
-                <div class="social-item">
+                </a>
+                <a class="social-item" href="https://instagram.com/thebeatles" target="_blank">
                     <div class="social-icon instagram-icon"></div>
                     <h3>Instagram</h3>
                     <p>@thebeatles</p>
-                </div>
-                <div class="social-item">
+                </a>
+                <a class="social-item" href="https://youtube.com/thebeatles" target="_blank">
                     <div class="social-icon youtube-icon"></div>
                     <h3>YouTube Channel</h3>
                     <p>The Beatles Official</p>
-                </div>
+                </a>
             </div>
         </section>
     </main>
