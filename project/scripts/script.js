@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     addSmoothScrolling();
     setActiveNavLink();
 
-    if (window.location.pathname === '/project/index.html') {
+    if (window.location.pathname.endsWith('index.html')) {
         populateAlbums();
     }
 
