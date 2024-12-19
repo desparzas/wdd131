@@ -163,8 +163,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('Current path:', currentPath);
 
-    if (currentPath.includes('index.html')) {
+    try{
         populateAlbums();
+    } catch (error) {
     }
 
     addHoverEffects('.album-cover', 'scale(1.05)');
