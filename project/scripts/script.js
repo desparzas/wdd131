@@ -79,85 +79,91 @@ const albums = [
     }
 ];
 
-
 function populateAlbums() {
     const albumGrid = document.querySelector('.album-grid');
+    if (!albumGrid) {
+        console.error('Album grid element not found');
+        return;
+    }
     albumGrid.innerHTML = ''; // Clear existing content
+
+    const favoriteAlbum = localStorage.getItem('favoriteAlbum');
 
     albums.forEach(album => {
         const albumCard = document.createElement('div');
         albumCard.className = 'album-card';
+        if (album.title === favoriteAlbum) {
+            albumCard.classList.add('favorite');
+        }
         albumCard.innerHTML = `
             <span class="album-genre">${album.genre}</span>
-            <div class="album-cover" style="background-image: url('${album.coverUrl}')"></div>
+            <div class="album-cover" style="background-image: url('${album.coverUrl}');" loading="lazy"></div>
             <h3>${album.title}</h3>
             <p>Release date: ${album.releaseDate}</p>
+            <button class="favorite-btn">Favorite</button>
         `;
+        albumCard.querySelector('.favorite-btn').addEventListener('click', () => {
+            localStorage.setItem('favoriteAlbum', album.title);
+            highlightFavoriteAlbum(album.title);
+        });
         albumGrid.appendChild(albumCard);
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth scrolling to all links
-    console.log('DOM fully loaded and parsed');
+function highlightFavoriteAlbum(favoriteTitle) {
+    document.querySelectorAll('.album-card').forEach(card => {
+        if (card.querySelector('h3').textContent === favoriteTitle) {
+            card.classList.add('favorite');
+        } else {
+            card.classList.remove('favorite');
+        }
+    });
+}
+
+function addSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
     });
+}
+
+function setActiveNavLink() {
     const currentPath = window.location.pathname;
-
-    // si la página es el index, mostrar los álbumes
-    if (currentPath === '/project/index.html'){
-        populateAlbums();
-    }
-
-    // ponerle el estilo active al link que corresponda
-    console.log(currentPath);
     const links = document.querySelectorAll('.navbar-links a');
     links.forEach(link => {
         if (link.pathname === currentPath) {
             link.classList.add('active');
         }
     });
+}
 
-    // Add hover effect to album covers
-    const albumCovers = document.querySelectorAll('.album-cover');
-    albumCovers.forEach(cover => {
-        cover.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
+function addHoverEffects(selector, transformStyle) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            this.style.transform = transformStyle;
             this.style.transition = 'transform 0.3s ease';
         });
-        cover.addEventListener('mouseleave', function() {
+        element.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1)';
         });
     });
+}
 
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    galleryItems.forEach(cover => {
-        cover.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-            this.style.transition = 'transform 0.3s ease';
-        });
-        cover.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    });
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+    addSmoothScrolling();
+    setActiveNavLink();
 
-    // Add a simple animation to social icons
-    const socialIcons = document.querySelectorAll('.social-icon');
-    socialIcons.forEach(icon => {
-        icon.addEventListener('mouseenter', function() {
-            this.style.transform = 'rotate(10deg)';
-            this.style.transition = 'transform 0.3s ease';
-        });
-        icon.addEventListener('mouseleave', function() {
-            this.style.transform = 'rotate(0deg)';
-        });
-    });
+    if (window.location.pathname === '/project/index.html') {
+        populateAlbums();
+    }
+
+    addHoverEffects('.album-cover', 'scale(1.05)');
+    addHoverEffects('.gallery-item', 'scale(1.05)');
+    addHoverEffects('.social-icon', 'rotate(10deg)');
 });
-
